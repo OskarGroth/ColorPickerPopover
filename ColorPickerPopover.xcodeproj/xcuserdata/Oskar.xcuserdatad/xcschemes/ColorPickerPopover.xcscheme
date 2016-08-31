@@ -15,9 +15,9 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "752564831D76EF8600A18664"
-               BuildableName = "ColorPicker.app"
-               BlueprintName = "ColorPicker"
-               ReferencedContainer = "container:ColorPicker.xcodeproj">
+               BuildableName = "ColorPickerPopover.app"
+               BlueprintName = "ColorPickerPopover"
+               ReferencedContainer = "container:ColorPickerPopover.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
       </BuildActionEntries>
@@ -33,9 +33,9 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "752564831D76EF8600A18664"
-            BuildableName = "ColorPicker.app"
-            BlueprintName = "ColorPicker"
-            ReferencedContainer = "container:ColorPicker.xcodeproj">
+            BuildableName = "ColorPickerPopover.app"
+            BlueprintName = "ColorPickerPopover"
+            ReferencedContainer = "container:ColorPickerPopover.xcodeproj">
          </BuildableReference>
       </MacroExpansion>
       <AdditionalOptions>
@@ -56,9 +56,9 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "752564831D76EF8600A18664"
-            BuildableName = "ColorPicker.app"
-            BlueprintName = "ColorPicker"
-            ReferencedContainer = "container:ColorPicker.xcodeproj">
+            BuildableName = "ColorPickerPopover.app"
+            BlueprintName = "ColorPickerPopover"
+            ReferencedContainer = "container:ColorPickerPopover.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
       <AdditionalOptions>
@@ -75,9 +75,9 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "752564831D76EF8600A18664"
-            BuildableName = "ColorPicker.app"
-            BlueprintName = "ColorPicker"
-            ReferencedContainer = "container:ColorPicker.xcodeproj">
+            BuildableName = "ColorPickerPopover.app"
+            BlueprintName = "ColorPickerPopover"
+            ReferencedContainer = "container:ColorPickerPopover.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
    </ProfileAction>

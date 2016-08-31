@@ -7,23 +7,23 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		752564881D76EF8600A18664 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 752564871D76EF8600A18664 /* AppDelegate.swift */; };
 		7525648A1D76EF8600A18664 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 752564891D76EF8600A18664 /* Assets.xcassets */; };
 		7525648D1D76EF8600A18664 /* MainMenu.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7525648B1D76EF8600A18664 /* MainMenu.xib */; };
 		752564951D76EFB600A18664 /* ColorWell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 752564941D76EFB600A18664 /* ColorWell.swift */; };
 		752564971D76F32100A18664 /* ColorPickerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 752564961D76F32100A18664 /* ColorPickerViewController.swift */; };
-		7525649E1D77796E00A18664 /* ColorDemoTestView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7525649D1D77796E00A18664 /* ColorDemoTestView.swift */; };
+		752564A21D778D4A00A18664 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 752564A01D778D4A00A18664 /* AppDelegate.swift */; };
+		752564A31D778D4A00A18664 /* ColorDemoTestView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 752564A11D778D4A00A18664 /* ColorDemoTestView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		752564841D76EF8600A18664 /* ColorPicker.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ColorPicker.app; sourceTree = BUILT_PRODUCTS_DIR; };
-		752564871D76EF8600A18664 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		752564841D76EF8600A18664 /* ColorPickerPopover.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ColorPickerPopover.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		752564891D76EF8600A18664 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		7525648C1D76EF8600A18664 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/MainMenu.xib; sourceTree = "<group>"; };
 		7525648E1D76EF8600A18664 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		752564941D76EFB600A18664 /* ColorWell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ColorWell.swift; sourceTree = "<group>"; };
 		752564961D76F32100A18664 /* ColorPickerViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ColorPickerViewController.swift; sourceTree = "<group>"; };
-		7525649D1D77796E00A18664 /* ColorDemoTestView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ColorDemoTestView.swift; sourceTree = "<group>"; };
+		752564A01D778D4A00A18664 /* AppDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = SOURCE_ROOT; };
+		752564A11D778D4A00A18664 /* ColorDemoTestView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ColorDemoTestView.swift; sourceTree = SOURCE_ROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -48,7 +48,7 @@
 		752564851D76EF8600A18664 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				752564841D76EF8600A18664 /* ColorPicker.app */,
+				752564841D76EF8600A18664 /* ColorPickerPopover.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -56,8 +56,8 @@
 		752564861D76EF8600A18664 /* ColorPicker */ = {
 			isa = PBXGroup;
 			children = (
-				752564871D76EF8600A18664 /* AppDelegate.swift */,
-				7525649D1D77796E00A18664 /* ColorDemoTestView.swift */,
+				752564A01D778D4A00A18664 /* AppDelegate.swift */,
+				752564A11D778D4A00A18664 /* ColorDemoTestView.swift */,
 				752564891D76EF8600A18664 /* Assets.xcassets */,
 				7525648B1D76EF8600A18664 /* MainMenu.xib */,
 				752564941D76EFB600A18664 /* ColorWell.swift */,
@@ -70,9 +70,9 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		752564831D76EF8600A18664 /* ColorPicker */ = {
+		752564831D76EF8600A18664 /* ColorPickerPopover */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 752564911D76EF8600A18664 /* Build configuration list for PBXNativeTarget "ColorPicker" */;
+			buildConfigurationList = 752564911D76EF8600A18664 /* Build configuration list for PBXNativeTarget "ColorPickerPopover" */;
 			buildPhases = (
 				752564801D76EF8600A18664 /* Sources */,
 				752564811D76EF8600A18664 /* Frameworks */,
@@ -82,9 +82,9 @@
 			);
 			dependencies = (
 			);
-			name = ColorPicker;
+			name = ColorPickerPopover;
 			productName = ColorPicker;
-			productReference = 752564841D76EF8600A18664 /* ColorPicker.app */;
+			productReference = 752564841D76EF8600A18664 /* ColorPickerPopover.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
@@ -104,7 +104,7 @@
 					};
 				};
 			};
-			buildConfigurationList = 7525647F1D76EF8600A18664 /* Build configuration list for PBXProject "ColorPicker" */;
+			buildConfigurationList = 7525647F1D76EF8600A18664 /* Build configuration list for PBXProject "ColorPickerPopover" */;
 			compatibilityVersion = "Xcode 3.2";
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
@@ -117,7 +117,7 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				752564831D76EF8600A18664 /* ColorPicker */,
+				752564831D76EF8600A18664 /* ColorPickerPopover */,
 			);
 		};
 /* End PBXProject section */
@@ -139,8 +139,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				752564881D76EF8600A18664 /* AppDelegate.swift in Sources */,
-				7525649E1D77796E00A18664 /* ColorDemoTestView.swift in Sources */,
+				752564A21D778D4A00A18664 /* AppDelegate.swift in Sources */,
+				752564A31D778D4A00A18664 /* ColorDemoTestView.swift in Sources */,
 				752564951D76EFB600A18664 /* ColorWell.swift in Sources */,
 				752564971D76F32100A18664 /* ColorPickerViewController.swift in Sources */,
 			);
@@ -258,7 +258,7 @@
 				DEVELOPMENT_TEAM = ZQK6SX26CE;
 				INFOPLIST_FILE = ColorPicker/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = org.cindori.ColorPicker;
+				PRODUCT_BUNDLE_IDENTIFIER = org.cindori.ColorPickerPopover;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 3.0;
 			};
@@ -272,7 +272,7 @@
 				DEVELOPMENT_TEAM = ZQK6SX26CE;
 				INFOPLIST_FILE = ColorPicker/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = org.cindori.ColorPicker;
+				PRODUCT_BUNDLE_IDENTIFIER = org.cindori.ColorPickerPopover;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 3.0;
 			};
@@ -281,7 +281,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		7525647F1D76EF8600A18664 /* Build configuration list for PBXProject "ColorPicker" */ = {
+		7525647F1D76EF8600A18664 /* Build configuration list for PBXProject "ColorPickerPopover" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				7525648F1D76EF8600A18664 /* Debug */,
@@ -290,7 +290,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		752564911D76EF8600A18664 /* Build configuration list for PBXNativeTarget "ColorPicker" */ = {
+		752564911D76EF8600A18664 /* Build configuration list for PBXNativeTarget "ColorPickerPopover" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				752564921D76EF8600A18664 /* Debug */,
