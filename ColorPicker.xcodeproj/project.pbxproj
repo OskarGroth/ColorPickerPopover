@@ -10,6 +10,9 @@
 		752564881D76EF8600A18664 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 752564871D76EF8600A18664 /* AppDelegate.swift */; };
 		7525648A1D76EF8600A18664 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 752564891D76EF8600A18664 /* Assets.xcassets */; };
 		7525648D1D76EF8600A18664 /* MainMenu.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7525648B1D76EF8600A18664 /* MainMenu.xib */; };
+		752564951D76EFB600A18664 /* ColorWell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 752564941D76EFB600A18664 /* ColorWell.swift */; };
+		752564971D76F32100A18664 /* ColorPickerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 752564961D76F32100A18664 /* ColorPickerViewController.swift */; };
+		7525649E1D77796E00A18664 /* ColorDemoTestView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7525649D1D77796E00A18664 /* ColorDemoTestView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -18,6 +21,9 @@
 		752564891D76EF8600A18664 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		7525648C1D76EF8600A18664 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/MainMenu.xib; sourceTree = "<group>"; };
 		7525648E1D76EF8600A18664 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		752564941D76EFB600A18664 /* ColorWell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ColorWell.swift; sourceTree = "<group>"; };
+		752564961D76F32100A18664 /* ColorPickerViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ColorPickerViewController.swift; sourceTree = "<group>"; };
+		7525649D1D77796E00A18664 /* ColorDemoTestView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ColorDemoTestView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -51,8 +57,11 @@
 			isa = PBXGroup;
 			children = (
 				752564871D76EF8600A18664 /* AppDelegate.swift */,
+				7525649D1D77796E00A18664 /* ColorDemoTestView.swift */,
 				752564891D76EF8600A18664 /* Assets.xcassets */,
 				7525648B1D76EF8600A18664 /* MainMenu.xib */,
+				752564941D76EFB600A18664 /* ColorWell.swift */,
+				752564961D76F32100A18664 /* ColorPickerViewController.swift */,
 				7525648E1D76EF8600A18664 /* Info.plist */,
 			);
 			path = ColorPicker;
@@ -131,6 +140,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				752564881D76EF8600A18664 /* AppDelegate.swift in Sources */,
+				7525649E1D77796E00A18664 /* ColorDemoTestView.swift in Sources */,
+				752564951D76EFB600A18664 /* ColorWell.swift in Sources */,
+				752564971D76F32100A18664 /* ColorPickerViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -285,6 +297,7 @@
 				752564931D76EF8600A18664 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

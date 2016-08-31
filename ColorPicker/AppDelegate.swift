@@ -9,10 +9,11 @@
 import Cocoa
 
 @NSApplicationMain
-class AppDelegate: NSObject, NSApplicationDelegate {
+class AppDelegate: NSObject, NSApplicationDelegate, ColorWellDelegate {
 
     @IBOutlet weak var window: NSWindow!
 
+    @IBOutlet weak var testView: ColorDemoTestView!
 
     func applicationDidFinishLaunching(_ aNotification: Notification) {
         // Insert code here to initialize your application
@@ -20,6 +21,10 @@ class AppDelegate: NSObject, NSApplicationDelegate {
 
     func applicationWillTerminate(_ aNotification: Notification) {
         // Insert code here to tear down your application
+    }
+    
+    func colorDidChange(colorWell: ColorWell, color: NSColor) {
+        testView.layer?.backgroundColor = color.cgColor
     }
 
 
