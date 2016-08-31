@@ -8,17 +8,17 @@
 
 import Cocoa
 
-@objc protocol ColorWellDelegate {
+@objc public protocol ColorWellDelegate {
     func colorDidChange(colorWell: ColorWell, color: NSColor)
 }
 
-class ColorWell: NSColorWell, NSPopoverDelegate {
+public class ColorWell: NSColorWell, NSPopoverDelegate {
     
-    @IBOutlet var delegate: AnyObject?
+    @IBOutlet public var delegate: AnyObject?
     
     let viewController = ColorPickerViewController()
     
-    override func activate(_ exclusive: Bool) {
+    override public func activate(_ exclusive: Bool) {
         viewController.loadView()
         viewController.colorPanel?.color = color
         let popover = NSPopover()
@@ -29,12 +29,12 @@ class ColorWell: NSColorWell, NSPopoverDelegate {
         viewController.colorPanel!.addObserver(self, forKeyPath: "color", options: .new, context: nil)
     }
     
-    func popoverDidClose(_ notification: Notification) {
+    public func popoverDidClose(_ notification: Notification) {
         deactivate()
         viewController.colorPanel?.removeObserver(self, forKeyPath: "color")
     }
     
-    override func observeValue(forKeyPath keyPath: String?, of object: Any?, change: [NSKeyValueChangeKey : Any]?, context: UnsafeMutableRawPointer?) {
+    override public func observeValue(forKeyPath keyPath: String?, of object: Any?, change: [NSKeyValueChangeKey : Any]?, context: UnsafeMutableRawPointer?) {
         if let panel = object as? NSColorPanel {
             if panel == viewController.colorPanel {
                 color = viewController.colorPanel!.color
