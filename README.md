@@ -1,14 +1,14 @@
-ColorPicker
+ColorPickerPopover
 ==================
 
 Lightweight Color Picker inside NSPopover.
 
-<img src="https://s3.amazonaws.com/cindori/images/colorpicker.png" width="600">
+<img src="https://s3.amazonaws.com/cindori/images/colorpicker.png" width="620">
 
 ## Installation (CocoaPods)
-Configure your Podfile to use `ColorPicker`:
+Configure your Podfile to use `ColorPickerPopover`:
 
-```pod 'ColorPicker'```
+```pod 'ColorPickerPopover'```
 
 Note that this repo is Swift 3 only.
 
