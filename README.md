@@ -5,11 +5,15 @@ Lightweight Color Picker inside NSPopover.
 
 <img src="https://s3.amazonaws.com/cindori/images/colorpicker.png" width="620">
 
-This popover only shows a single color picker option (defaulting to Color Wheel).
-You can change the color picker by changing 
-        let paletteItem = colorPanel?.toolbar?.items[0]
+This popover shows a single color picker option (defaulting to Color Wheel).
+
+You can change the color picker by changing:
+
+        ```let paletteItem = colorPanel?.toolbar?.items[0]```
+        
 To other color palette item indexes.
-For me this is currently enough, but if you want to show a true color panel (with the toolbar and all the options), it should be straightforward to implement the toolbar manually. If you do, please send me a pull request.
+
+If you want to show a true color panel (with the toolbar and all the options), it should be straightforward to implement the toolbar manually. If you do, please send me a pull request.
 
 ## Installation (CocoaPods)
 Configure your Podfile to use `ColorPickerPopover`:
