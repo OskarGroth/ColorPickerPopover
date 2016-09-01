@@ -9,7 +9,7 @@ This popover shows a single color picker option (defaulting to Color Wheel).
 
 You can change the color picker by changing:
 
-        ```let paletteItem = colorPanel?.toolbar?.items[0]```
+        let paletteItem = colorPanel?.toolbar?.items[0]
         
 To other color palette item indexes.
 
