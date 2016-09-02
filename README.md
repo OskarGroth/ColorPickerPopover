@@ -8,8 +8,9 @@ Lightweight Color Picker inside NSPopover.
 ## Installation (CocoaPods)
 Configure your Podfile to use `ColorPickerPopover`:
 
-```pod 'ColorPickerPopover'```
+```pod 'ColorPickerPopover', :git => 'https://github.com/OskarGroth/ColorPickerPopover.git'```
 
+(Some Swift3 issues are preventing me from uploading to Cocoapods for now.)
 Note that this repo is Swift 3 only.
 
 ## Usage
