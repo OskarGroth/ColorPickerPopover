@@ -100,6 +100,7 @@
 					752564831D76EF8600A18664 = {
 						CreatedOnToolsVersion = 8.0;
 						DevelopmentTeam = ZQK6SX26CE;
+						LastSwiftMigration = 0800;
 						ProvisioningStyle = Automatic;
 					};
 				};
