@@ -17,7 +17,7 @@ open class ColorWell: NSColorWell, NSPopoverDelegate {
     @IBOutlet open var delegate: AnyObject?
     override open var isEnabled: Bool {
         didSet {
-            alphaValue = isEnabled ? 1 : 0.4
+            alphaValue = isEnabled ? 1 : 0.5
         }
     }
     let viewController = ColorPickerViewController()
