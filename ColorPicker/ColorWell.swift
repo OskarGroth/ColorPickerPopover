@@ -15,7 +15,11 @@ import Cocoa
 open class ColorWell: NSColorWell, NSPopoverDelegate {
     
     @IBOutlet open var delegate: AnyObject?
-    
+    override open var isEnabled: Bool {
+        didSet {
+            alphaValue = isEnabled ? 1 : 0.4
+        }
+    }
     let viewController = ColorPickerViewController()
     
     override open func activate(_ exclusive: Bool) {
@@ -33,7 +37,7 @@ open class ColorWell: NSColorWell, NSPopoverDelegate {
         deactivate()
         viewController.colorPanel?.removeObserver(self, forKeyPath: "color")
     }
-    
+
     override open func observeValue(forKeyPath keyPath: String?, of object: Any?, change: [NSKeyValueChangeKey : Any]?, context: UnsafeMutableRawPointer?) {
         if let panel = object as? NSColorPanel {
             if panel == viewController.colorPanel {
