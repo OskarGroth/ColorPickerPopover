@@ -13,13 +13,11 @@ class ColorPickerViewController: NSViewController {
     private(set) var colorPanel: NSColorPanel!
     
     override func loadView() {
-        
         colorPanel = NSColorPanel.shared
         colorPanel.orderOut(self)
         colorPanel.showsAlpha = true
         colorPanel.mode = .wheel
         view = colorPanel.contentView!
-        
     }
     
 }
