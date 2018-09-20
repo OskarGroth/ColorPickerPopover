@@ -23,7 +23,7 @@ class AppDelegate: NSObject, NSApplicationDelegate, ColorWellDelegate {
         // Insert code here to tear down your application
     }
     
-    func colorDidChange(colorWell: ColorWell, color: NSColor) {
+    func colorWell(_ colorWell: ColorWell, didChangeColor color: NSColor) {
         testView.layer?.backgroundColor = color.cgColor
     }
 

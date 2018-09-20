@@ -9,41 +9,52 @@
 import Cocoa
 
 @objc public protocol ColorWellDelegate {
-    func colorDidChange(colorWell: ColorWell, color: NSColor)
+    func colorWell(_ colorWell: ColorWell, didChangeColor color: NSColor)
 }
 
 open class ColorWell: NSColorWell, NSPopoverDelegate {
     
-    @IBOutlet open var delegate: AnyObject?
+    @IBOutlet open var delegate: ColorWellDelegate?
+    
     override open var isEnabled: Bool {
         didSet {
             alphaValue = isEnabled ? 1 : 0.5
         }
     }
+    
     let viewController = ColorPickerViewController()
     
     override open func activate(_ exclusive: Bool) {
         viewController.loadView()
-        viewController.colorPanel?.color = color
+        viewController.colorPanel.color = color
+        presentInPopover()
+        viewController.colorPanel.addObserver(self, forKeyPath: "color", options: .new, context: nil)
+    }
+    
+    open func presentInPopover() {
         let popover = NSPopover()
         popover.delegate = self
         popover.behavior = .semitransient
         popover.contentViewController = viewController
         popover.show(relativeTo: frame, of: self.superview!, preferredEdge: .maxX)
-        viewController.colorPanel!.addObserver(self, forKeyPath: "color", options: .new, context: nil)
     }
     
     open func popoverDidClose(_ notification: Notification) {
         deactivate()
-        viewController.colorPanel?.removeObserver(self, forKeyPath: "color")
+        viewController.colorPanel.removeObserver(self, forKeyPath: "color")
     }
 
     override open func observeValue(forKeyPath keyPath: String?, of object: Any?, change: [NSKeyValueChangeKey : Any]?, context: UnsafeMutableRawPointer?) {
-        if let panel = object as? NSColorPanel {
-            if panel == viewController.colorPanel {
-                color = viewController.colorPanel!.color
-                delegate?.colorDidChange(colorWell: self, color: color)
-            }
+        switch keyPath {
+        case "color":
+            guard
+                let panel = object as? NSColorPanel,
+                panel == viewController.colorPanel
+                else { return }
+            color = viewController.colorPanel.color
+            delegate?.colorWell(self, didChangeColor: color)
+        default:
+            super.observeValue(forKeyPath: keyPath, of: object, change: change, context: context)
         }
     }
     
