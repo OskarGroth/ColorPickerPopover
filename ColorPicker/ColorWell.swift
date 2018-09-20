@@ -14,6 +14,8 @@ import Cocoa
 
 open class ColorWell: NSColorWell, NSPopoverDelegate {
     
+    static let colorKeyPath = "color"
+    
     @IBOutlet open var delegate: ColorWellDelegate?
     
     override open var isEnabled: Bool {
@@ -28,7 +30,7 @@ open class ColorWell: NSColorWell, NSPopoverDelegate {
         viewController.loadView()
         viewController.colorPanel.color = color
         presentInPopover()
-        viewController.colorPanel.addObserver(self, forKeyPath: "color", options: .new, context: nil)
+        viewController.colorPanel.addObserver(self, forKeyPath: ColorWell.colorKeyPath, options: .new, context: nil)
     }
     
     open func presentInPopover() {
@@ -41,12 +43,12 @@ open class ColorWell: NSColorWell, NSPopoverDelegate {
     
     open func popoverDidClose(_ notification: Notification) {
         deactivate()
-        viewController.colorPanel.removeObserver(self, forKeyPath: "color")
+        viewController.colorPanel.removeObserver(self, forKeyPath: ColorWell.colorKeyPath)
     }
 
     override open func observeValue(forKeyPath keyPath: String?, of object: Any?, change: [NSKeyValueChangeKey : Any]?, context: UnsafeMutableRawPointer?) {
         switch keyPath {
-        case "color":
+        case ColorWell.colorKeyPath:
             guard
                 let panel = object as? NSColorPanel,
                 panel == viewController.colorPanel
